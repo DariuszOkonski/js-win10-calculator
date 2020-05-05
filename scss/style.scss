@@ -1,0 +1,48 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebebeb;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 100%;
+    min-width: 300px;
+    height: 80vh;
+    background-color: grey;
+
+    display: flex;
+
+    .board {
+        background-color: yellow;
+        width: 100%;
+    }
+
+    .history-memory {
+        display: none;
+        background-color: green;
+    }
+
+    @media(min-width: 600px) {
+        height: 100vh;
+
+        .board {
+            width: 70%;
+        }
+        .history-memory {
+            display: block;
+            width: 30%;
+        }
+    }
+}
