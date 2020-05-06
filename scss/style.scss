@@ -20,12 +20,10 @@ body {
     width: 100%;
     min-width: 300px;
     height: 80vh;
-    // background-color: grey;
 
     display: flex;
 
     .board {
-        // background-color: yellow;
         width: 100%;
         margin: 0.5rem;
 
@@ -34,9 +32,8 @@ body {
             font-weight: 100;
         }
 
-
         .display-board {
-            // background-color: green;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -65,32 +62,68 @@ body {
             }
         }
 
-        .main-buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+        .buttons-container {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
 
-            .btn {
+            .main-buttons {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
-                height: 80px;
-                font-size: 1.4rem;
-                background-color: darken($color: #ebebeb, $amount: 5);
-                border: 1px solid #ebebeb;
+                height: 100%;
 
-                &__white {
-                    background-color: white;
-                }
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
 
-                &__blue {
-                    background-color: #5ea9fd;
-                    &:hover {
-                        background-color: darken($color: #5ea9fd, $amount: 10);
+                .btn {
+                    width: 100%;
+                    height: 80px;
+                    font-size: 1.4rem;
+                    background-color: darken($color: #ebebeb, $amount: 5);
+                    border: 1px solid #ebebeb;
+
+                    &__white {
+                        background-color: white;
                     }
-                }
-                &:hover {
-                    background-color: darken($color: #ebebeb, $amount: 10);
-                }
+
+                    &__blue {
+                        background-color: #5ea9fd;
+                        &:hover {
+                            background-color: darken($color: #5ea9fd, $amount: 10);
+                        }
+                    }
+                    &:hover {
+                        background-color: darken($color: #ebebeb, $amount: 10);
+                    }
+                }       
             }
 
+            .mobile-history {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #a9a9b1;
+                padding: 0.5rem;
+                text-align: right;
+                transition: top .2s ease;
+                
+                &.active {
+                    top: 0;
+                }
+
+                &__board {
+                    margin: 1rem 0;
+                }
+
+                &__score {
+                    font-size: 2rem;
+                }
+            }
         }
     }
 
@@ -109,6 +142,10 @@ body {
                 .btn {
                     display: none;
                 }
+            }
+
+            .mobile-history {
+                display: none;
             }
         }
         .history-memory {
