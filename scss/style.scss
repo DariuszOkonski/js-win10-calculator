@@ -60,6 +60,16 @@ body {
 
             .btn {
                 width: 100%;
+                font-weight: 700;
+
+                &.disabled {
+                    color: gray;
+
+                    &:hover {
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                }
             }
 
             &.active::before{
