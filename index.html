@@ -12,7 +12,7 @@
     <div class="calculator">
         <div class="board">
             <div class="display-board">
-                <button class="btn">
+                <button class="btn" data-btn-history-mobile >
                     <i class="fas fa-history"></i>
                 </button>
                 <span class="display-board__history">200 + 100 - 80</span>
@@ -56,7 +56,7 @@
                     <button class="btn btn__blue">=</button>
                 </div>
 
-                <div class="mobile-history">
+                <div class="mobile-history" data-mobile-history >
                     <div class="mobile-history__board">
                         <p>100 + 200 =</p>
                         <p class="mobile-history__score">80</p>
@@ -85,5 +85,10 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script>
+        const calculator = new Calculator();
+        calculator.initialization();
+        console.log(calculator);
+    </script>
 </body>
 </html>
