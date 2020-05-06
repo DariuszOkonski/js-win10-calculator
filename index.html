@@ -13,9 +13,9 @@
     <div class="container">
         <main class="main-container">
             <!-- screen-cover -->
-            <div class="screen"> 
+            <div class="screen" data-screen> 
                 <div class="display">
-                    <button class="display__button">
+                    <button class="display__button" data-btn-histor-mobile >
                         <i class="fas fa-history"></i>
                     </button>
                     <p class="display__paragraph">65 + 32 + 96 + 32 +</p>
@@ -28,7 +28,7 @@
                     <button class="memory-buttons__button">M+</button>
                     <button class="memory-buttons__button">M-</button>
                     <button class="memory-buttons__button">MS</button>
-                    <button class="memory-buttons__button">M^</button>
+                    <button class="memory-buttons__button" data-memory-display>M^</button>
                 </div>
             </div>
             
@@ -60,13 +60,30 @@
                     <button class="buttons__button buttons__button--blue">=</button>
                 </div>
 
-                <div class="moblile-history">
+                <div class="mobile-history" data-mobile-history>
                     <h1>Mobile histroy</h1>
                 </div>
             </div>
         </main>
 
+        <div class="history-desktop">
+            <div class="history-display">
+                <p class="history-display__paragraph">128 + 36 + 64 =</p>
+                <h3 class="history-display__header">365</h3>
+            </div>
+            
+            <div class="history-display">
+                <p class="history-display__paragraph">128 + 36 + 64 + 54 + 132 + 65 =</p>
+                <h3 class="history-display__header">628</h3>
+            </div>
+        </div>
     </div>
     
+    <script src="js/index.js"></script>
+    <script>
+        const calculator = new Calculator();
+        console.log(calculator);
+
+    </script>
 </body>
 </html>
